@@ -3,7 +3,7 @@
 provider "aws" {
   region  = "eu-west-1"
   //shared_config_files      = ["/Users/tf_user/.aws/conf"]
-  //shared_credentials_files = ["/~/.aws/credentials"]
+  ////shared_credentials_files = ["/~/.aws/credentials"]
   access_key = "${var.aws_access_key_id}"
   secret_key = "${var.aws_secret_access_key}"
   //profile = "default"
