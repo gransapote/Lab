@@ -22,7 +22,7 @@ resource "aws_s3_bucket" "mapfre-gitops-amelgar1" {
   //}
 //}
 
-resource "aws_s3_bucket_acl" "mapfre-gitops-amelgar1" {
-  bucket = aws_s3_bucket.mapfre-gitops-amelgar1.id
-  acl    = "public-read"
-}
+//resource "aws_s3_bucket_acl" "mapfre-gitops-amelgar1" {
+  //bucket = aws_s3_bucket.mapfre-gitops-amelgar1.id
+  //acl    = "public-read"
+//}
