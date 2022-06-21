@@ -1,6 +1,6 @@
-variable "image_id" {
-  type = string
-}
+//variable "image_id" {
+  //type = string
+//}
 
 variable "availability_zone_names" {
   type    = list(string)
