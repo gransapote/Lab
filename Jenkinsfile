@@ -29,15 +29,15 @@ pipeline {
         stage ("Terraform plan") {
             when { not { branch 'main' } }
             steps {
-                sh "terraform plan -input=false -auto-approve"
+                sh "terraform plan"
             }
         }
         stage ("Terraform apply") {
             when { branch 'main' }
             steps {
                 sh """
-                    terraform plan -input=false -auto-approve 
-                    terraform apply -input=false -auto-approve
+                    terraform plan 
+                    terraform apply --auto-approve
                 """
             }
         }
