@@ -1,7 +1,7 @@
-/web/.terraform/
-web/.terraform/
-web/.terraform.lock.hcl
-/web/.terraform.lock.hcl
-/web/create_apet/*
-web/create_apet/*
+.terraform/
+./.terraform/
+.terraform.lock.hcl
+./.terraform.lock.hcl
+./create_apet/*
+create_apet/*
 
