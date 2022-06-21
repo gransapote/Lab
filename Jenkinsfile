@@ -36,8 +36,8 @@ pipeline {
             when { branch 'main' }
             steps {
                 sh """
-                    terraform plan -out=terraform-aws-demo
-                    terraform apply terraform-aws-demo
+                    terraform plan 
+                    terraform apply 
                 """
             }
         }
