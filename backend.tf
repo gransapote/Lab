@@ -1,5 +1,5 @@
 terraform {
   backend "local" {
-    Workspace_dir = "amelgar"
+    //Workspace_dir = "amelgar"
   }
 }
