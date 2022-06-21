@@ -3,9 +3,9 @@
 provider "aws" {
   region  = "eu-west-1"
   //shared_config_files      = ["/Users/tf_user/.aws/conf"]
-  shared_credentials_files = ["/~/.aws/credentials"]
-  //access_key = "${var.aws_access_key_id}"
-  //secret_key = "${var.aws_secret_access_key}"
+  //shared_credentials_files = ["/~/.aws/credentials"]
+  access_key = "${var.aws_access_key_id}"
+  secret_key = "${var.aws_secret_access_key}"
   //profile = "default"
 }
 
@@ -26,7 +26,7 @@ resource "aws_s3_bucket" "mapfre-gitops-amelgar1" {
   //}
 //}
 
-//resource "aws_s3_bucket_acl" "mapfre-gitops-amelgar1" {
-  //bucket = aws_s3_bucket.mapfre-gitops-amelgar1.id
-  //acl    = "public-read"
-//}
+resource "aws_s3_bucket_acl" "mapfre-gitops-amelgar1" {
+  bucket = aws_s3_bucket.mapfre-gitops-amelgar1.id
+  acl    = "public-read"
+}
