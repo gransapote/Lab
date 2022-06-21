@@ -23,6 +23,6 @@ resource "aws_s3_bucket_website_configuration" "web" {
 }
 
 resource "aws_s3_bucket_acl" "web_bucket_acl" {
-  bucket = "aws_s3_bucket.web.id"
+  bucket = "aws_s3_bucket.web.bucket"
   acl    = "public-read"
 }
