@@ -7,11 +7,11 @@ provider "aws" {
 
 
 //resource "aws_s3_bucket" "web" {
-  bucket = "mapfre-gitops-amelgar"
-  acl = "public-read"
-  website {
-    index_document = "index.html"
-  }
+//  bucket = "mapfre-gitops-amelgar"
+//  acl = "public-read"
+//  website {
+//    index_document = "index.html"
+//  }
 //}
 
 resource "aws_s3_bucket_website_configuration" "web" {
