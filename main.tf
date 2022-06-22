@@ -10,8 +10,8 @@ provider "aws" {
 }
 
 
-resource "aws_s3_bucket" "mapfre-gitops-amelgar1" {
-  bucket = "mapfre-gitops-amelgar1"
+resource "aws_s3_bucket" "mapfre-gitops-amelgar" {
+  bucket = "mapfre-gitops-amelgar"
 //  acl = "public-read"
 //  website {
 //    index_document = "index.html"
@@ -26,7 +26,7 @@ resource "aws_s3_bucket" "mapfre-gitops-amelgar1" {
   //}
 //}
 
-resource "aws_s3_bucket_acl" "mapfre-gitops-amelgar1" {
-  bucket = aws_s3_bucket.mapfre-gitops-amelgar1.id
+resource "aws_s3_bucket_acl" "mapfre-gitops-amelgar" {
+  bucket = aws_s3_bucket.mapfre-gitops-amelgar.id
   acl    = "public-read"
 }
