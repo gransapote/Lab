@@ -7,7 +7,7 @@
 //cfg.commitValidation.enabled = false
 
 pipeline {
-    //agent { label 'docker' }
+    agent { label 'docker' }
 
     //environment {
         //PEM_FILE=credentials('jpl-ssh-credentials')
