@@ -7,7 +7,14 @@ cfg = jplConfig('terraform', 'backend' ,'', [email: 'micorre@direc.com'])
 cfg.commitValidation.enabled = false
 
 pipeline {
-    agent { label 'docker' }
+    
+    agent any
+   
+    environment {
+        aws_access_key_id     = credentials('AWS_ACCESS_KEY_ID')
+        aws_secret_access_key = credentials('AWS_SECRET_ACCESS_KEY')
+    }  
+    
 
     //environment {
         //PEM_FILE=credentials('jpl-ssh-credentials')
