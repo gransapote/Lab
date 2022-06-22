@@ -11,6 +11,8 @@ pipeline {
 
     environment {
         PEM_FILE=credentials('jpl-ssh-credentials')
+        aws_access_key_id = ${env.aws_access_key_id}
+        aws_secret_access_key = ${env.aws_secret_access_key}
     }
 
     stages {
