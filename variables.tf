@@ -5,5 +5,5 @@ variable "access_key" {
 }
 variable "secret_key" {
      type = string
-     default = "Secret key to AWS console"
+     default = "Secret secret to AWS console"
 }
