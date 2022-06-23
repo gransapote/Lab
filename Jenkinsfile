@@ -11,19 +11,8 @@ cfg.commitValidation.enabled = false
 pipeline {
     
     agent any
-   
-    environment {
-        AWS_ACCESS_KEY_ID     = credentials('aws_access_key_id')
-        AWS_SECRET_ACCESS_KEY = credentials('aws_secret_access_key')
-    }  
+
     
-
-    //environment {
-        //PEM_FILE=credentials('jpl-ssh-credentials')
-      //  aws_access_key_id = (${env.aws_access_key_id})
-        //aws_secret_access_key = (${env.aws_secret_access_key})
-    //}
-
     stages {
         //stage ('Initialize') {
         //    steps  {
