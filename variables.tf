@@ -1,9 +1,9 @@
-//variable "image_id" {
-  //type = string
-//}
 
-//variable "availability_zone_names" {
-//  type    = list(string)
-//  default = ["eu-west-1a"]
-//}
-
+variable "aws_access_key_id" {
+     type = string
+     default = "Access key to AWS console"
+}
+variable "aws_secret_access_key" {
+     type = string
+     default = "Secret key to AWS console"
+}

@@ -2,17 +2,17 @@
 
 @Library('github.com/ayudadigital/jenkins-pipeline-library@v6.3.0') _
 
-// Initialize global config
-cfg = jplConfig('terraform', 'backend' ,'', [email: 'micorre@direc.com'])
+
+///Initialize global config
+cfg = jplConfig('reto', 'backend' ,'', [email: 'amelgar@mapfre.com'])
 cfg.commitValidation.enabled = false
 
+
 pipeline {
-    agent { label 'docker' }
+    
+    agent any
 
-    environment {
-        PEM_FILE=credentials('jpl-ssh-credentials')
-    }
-
+    
     stages {
         //stage ('Initialize') {
         //    steps  {
