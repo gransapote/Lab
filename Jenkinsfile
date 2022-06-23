@@ -25,7 +25,7 @@ pipeline {
                 //sh "terraform init -backend-config=./web/"
         //        sh "terraform init -backend-config=./"
         //    }
-        }
+        //}
         stage ("Terraform init") {
             steps {
                 sh "terraform init"
