@@ -3,7 +3,7 @@
 @Library('github.com/ayudadigital/jenkins-pipeline-library@v6.3.0') _
 
 
-///Initialize global config
+//Initialize global config
 cfg = jplConfig('reto', 'backend' ,'', [email: 'amelgar@mapfre.com'])
 cfg.commitValidation.enabled = false
 
@@ -32,7 +32,7 @@ pipeline {
             }
         }
         stage ("Terraform plan") {
-            when { branch 'pre' } 
+            when { not { branch 'main' } }
             steps {
                 sh "terraform plan"
             }
@@ -44,12 +44,6 @@ pipeline {
                     terraform plan 
                     terraform apply --auto-approve
                 """
-            }
-        }
-        stage ("Terraform Destroy") {
-            when { branch 'destro' }
-            steps {
-                sh "terraform destroy"
             }
         }
         stage ("Terraform show") {
