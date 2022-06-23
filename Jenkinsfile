@@ -4,7 +4,7 @@
 
 
 ///Initialize global config
-cfg = jplConfig('terraform', 'backend' ,'', [email: 'micorre@direc.com'])
+cfg = jplConfig('reto', 'backend' ,'', [email: 'amelgar@mapfre.com'])
 cfg.commitValidation.enabled = false
 
 
