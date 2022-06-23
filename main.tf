@@ -9,8 +9,8 @@ provider "aws" {
   //profile = "default"
   //access_key_id = "${var.aws_access_key_id}"
   //secret_key = "${var.aws_secret_access_key}"
-  access_key = var.access_key
-  secret_key = var.secret_key
+  //access_key = var.access_key
+  //secret_key = var.secret_key
 }
 
 
