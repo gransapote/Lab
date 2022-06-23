@@ -1,27 +1,20 @@
 #!groovy
 
 @Library('github.com/ayudadigital/jenkins-pipeline-library@v6.3.0') _
-@Library('github.com/releaseworks/jenkinslib') _
 
 
 ///Initialize global config
 cfg = jplConfig('terraform', 'backend' ,'', [email: 'micorre@direc.com'])
 cfg.commitValidation.enabled = false
-node {
-  stage("List S3 buckets") {
-    withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'aws-key', usernameVariable: 'AWS_ACCESS_KEY_ID', passwordVariable: 'AWS_SECRET_ACCESS_KEY']]) {
-        AWS("--region=eu-west-1 s3 ls")
-    }
-  }
-}
+
 
 pipeline {
     
     agent any
    
     environment {
-        aws_access_key_id     = credentials('AWS_ACCESS_KEY_ID')
-        aws_secret_access_key = credentials('AWS_SECRET_ACCESS_KEY')
+        AWS_ACCESS_KEY_ID     = credentials('aws_access_key_id')
+        AWS_SECRET_ACCESS_KEY = credentials('aws_secret_access_key')
     }  
     
 
