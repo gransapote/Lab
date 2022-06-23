@@ -18,13 +18,13 @@ pipeline {
     } 
     
     stages {
-        stage ('Initialize') {
-            steps  {
-                jplStart(cfg)
+        //stage ('Initialize') {
+        //    steps  {
+        //        jplStart(cfg)
         //        sh "ln -sf $PEM_FILE kevops-academy.pem"
                 //sh "terraform init -backend-config=./web/"
-                sh "terraform init -backend-config=./"
-            }
+        //        sh "terraform init -backend-config=./"
+        //    }
         }
         stage ("Terraform init") {
             steps {
