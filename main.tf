@@ -1,15 +1,17 @@
 /*   Main execution file, usually it has providers configuration */
   
-provider "aws" {
-  region  = "eu-west-1"
+//provider "aws" {
+  //region  = "eu-west-1"
   //shared_config_files      = ["/Users/tf_user/.aws/conf"]
   //shared_credentials_files = ["/~/.aws/credentials"]
   //access_key = "${var.aws_access_key_id}"
   //secret_key = "${var.aws_secret_access_key}"
   //profile = "default"
-  access_key_id = var.aws_access_key_id
-  secret_key = var.aws_secret_access_key
-}
+  //access_key_id = "${var.aws_access_key_id}"
+  //secret_key = "${var.aws_secret_access_key}"
+  //access_key = var.access_key
+  //secret_key = var.secret_key
+//}
 
 
 resource "aws_s3_bucket" "mapfre-gitops-amelgar" {
