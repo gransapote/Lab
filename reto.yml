@@ -1,0 +1,9 @@
+- hosts: localhost
+  tasks:
+  - name: Configure an s3 bucket as a website with index
+    amazon.aws.aws_s3:
+      bucket: mapfre-gitops-amelgar
+      object: index.html
+      src: index.html
+      permission: public-read
+      mode: put

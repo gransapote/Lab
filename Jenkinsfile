@@ -57,6 +57,18 @@ pipeline {
                 sh "terraform show"
             }
         }
+        stage ("Ansible No rama Main") {
+            when { not { branch 'main' } }
+            steps {
+                sh "ansible-playbook reto.yml --check"
+            }
+        }
+        stage ("Ansible rama Main") {
+            when { branch 'main' }
+            steps {
+                sh "ansible-playbook reto.yml"
+            }
+        }
     }
 
     post {
