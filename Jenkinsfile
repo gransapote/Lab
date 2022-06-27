@@ -32,7 +32,7 @@ pipeline {
                 sh "terraform init"
             }
         }
-                stage ("Sonar: escaneo ramas NO PR") {
+        stage ("Sonar: escaneo ramas NO PR") {
             when { not { branch 'PR-*' } }
             steps {
         // Realiza analisis de la rama y lo manda a SonarCloud
