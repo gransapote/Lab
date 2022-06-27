@@ -12,3 +12,4 @@ override.tf.json
 terraform.rc
 *.pem
 entrypoint.sh
+cambios.sh
