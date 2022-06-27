@@ -1,6 +1,12 @@
 - hosts: localhost
+  vars:
+    version: "{{ lookup('file', 'version.txt') }}"
   tasks:
-  - name: Configure an s3 bucket as a website with index
+  - name: Creacion de index con Jinja2
+    template:
+      src: index.j2
+      dest: index.html
+  - name: Configurar s3 bucket con index
     amazon.aws.aws_s3:
       bucket: mapfre-gitops-amelgar
       object: index.html

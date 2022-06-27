@@ -4,8 +4,18 @@
 
 ### Changes
 
+#### New
+
+* Versionado de fichero ([49ebbcb](https://github.com/gransapote/lab/commit/49ebbcb))
+
+#### Upgrade
+
+* Versionado de fichero ([c145b4f](https://github.com/gransapote/lab/commit/c145b4f))
+
 #### Update
 
+* Actualizado fichero de excepciones ([fc66899](https://github.com/gransapote/lab/commit/fc66899))
+* Actualizacion del fichero CHANGELOG ([42aa0e3](https://github.com/gransapote/lab/commit/42aa0e3))
 * Borrado fichero jen.old ([d44023e](https://github.com/gransapote/lab/commit/d44023e))
 * Borrado fichero jen.old ([ab8ec3a](https://github.com/gransapote/lab/commit/ab8ec3a))
 * Actualizacion de Gitignore ([e29dc18](https://github.com/gransapote/lab/commit/e29dc18))
