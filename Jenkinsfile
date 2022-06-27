@@ -88,12 +88,6 @@ pipeline {
                 """
             }
         }
-        stage ("Terraform Destroy") {
-            when { branch 'destro' }
-            steps {
-                sh "terraform destroy"
-            }
-        }
         stage ("Terraform show") {
             steps {
                 sh "terraform show"
