@@ -68,7 +68,7 @@ pipeline {
         // Wait for QuaityGate webhook result
                 timeout(time: 1, unit: 'HOURS') {
         // Parameter indicates whether to set pipeline to UNSTABLE if Quality Gate fails
-        // true = set pipeline to UNSTABLE, false = don't
+        /// true = set pipeline to UNSTABLE, false = don't
                     waitForQualityGate abortPipeline: true
                 }
             }
@@ -86,12 +86,6 @@ pipeline {
                     terraform plan 
                     terraform apply --auto-approve
                 """
-            }
-        }
-        stage ("Terraform Destroy") {
-            when { branch 'destro' }
-            steps {
-                sh "terraform destroy"
             }
         }
         stage ("Terraform show") {
