@@ -6,11 +6,17 @@
 
 #### Update
 
+* Borrado fichero jen.old ([d44023e](https://github.com/gransapote/lab/commit/d44023e))
+* Borrado fichero jen.old ([ab8ec3a](https://github.com/gransapote/lab/commit/ab8ec3a))
+* Actualizacion de Gitignore ([e29dc18](https://github.com/gransapote/lab/commit/e29dc18))
 * Actualizacion de Jenkins con Sonar ([48a1c59](https://github.com/gransapote/lab/commit/48a1c59))
 * Subida de fichero Index y yml ([0cc7ec4](https://github.com/gransapote/lab/commit/0cc7ec4))
 
 #### Fix
 
+* Reparado jenkinsfile y borrado de fichero test ([31b686e](https://github.com/gransapote/lab/commit/31b686e))
+* Reparado jenkinsfile ([a8da848](https://github.com/gransapote/lab/commit/a8da848))
+* Reparado jenkinsfile ([1141da8](https://github.com/gransapote/lab/commit/1141da8))
 * Correccion de configuracion Sonar en Jenkinsfile ([371e0a7](https://github.com/gransapote/lab/commit/371e0a7))
 * Correccion de configuracion Sonar en Jenkinsfile ([32efdb9](https://github.com/gransapote/lab/commit/32efdb9))
 * Rparar Proceso de configuracion en main ([af1355c](https://github.com/gransapote/lab/commit/af1355c))
