@@ -36,7 +36,7 @@ pipeline {
             when { not { branch 'PR-*' } }
             steps {
         // Realiza analisis de la rama y lo manda a SonarCloud
-                withSonarQubeEnv ('marferj-Sonar') {
+                withSonarQubeEnv ('amelgarsonar') {
                     sh '~/.sonar/sonar-scanner-4.7.0.2747-linux/bin/sonar-scanner \
                         -Dsonar.organization=gransapote \
                         -Dsonar.projectKey=gransapote_Lab \
