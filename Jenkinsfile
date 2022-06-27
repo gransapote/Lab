@@ -32,6 +32,47 @@ pipeline {
                 sh "terraform init"
             }
         }
+        stage ("Sonar: escaneo ramas NO PR") {
+            when { not { branch 'PR-*' } }
+            steps {
+        // Realiza analisis de la rama y lo manda a SonarCloud
+                withSonarQubeEnv ('amelgarsonar') {
+                    sh '~/.sonar/sonar-scanner-4.7.0.2747-linux/bin/sonar-scanner \
+                        -Dsonar.organization=gransapote \
+                        -Dsonar.projectKey=gransapote_Lab \
+			-Dsonar.sources=. \
+			-Dsonar.host.url=https://sonarcloud.io \
+                        -Dsonar.branch.name="$BRANCH_NAME"'
+                }
+            }
+        }
+        stage ("Sonar: Escaneo de ramas en PR") {
+            when { branch 'PR-*' }
+            steps {
+        // Realiza analisys en PR con SonarScanner y lo manda a SonarCloud
+                withSonarQubeEnv ('amelgarsonar') {
+                    sh "~/.sonar/sonar-scanner-4.7.0.2747-linux/bin/sonar-scanner \
+                        -Dsonar.organization=gransapote \
+                        -Dsonar.projectKey=gransapote_Lab \
+			-Dsonar.sources=. \
+                        -Dsonar.host.url=https://sonarcloud.io \
+                        -Dsonar.pullrequest.provider='GitHub' \
+                        -Dsonar.pullrequest.github.repository='gransapote/lab' \
+                        -Dsonar.pullrequest.key='${env.CHANGE_ID}' \
+                        -Dsonar.pullrequest.branch='${env.CHANGE_BRANCH}'"
+                }
+            }
+        }
+        stage ("Sonar: Espera a respuesta de Sonar por escaneo") {
+            steps {
+        // Wait for QuaityGate webhook result
+                timeout(time: 1, unit: 'HOURS') {
+        // Parameter indicates whether to set pipeline to UNSTABLE if Quality Gate fails
+        // true = set pipeline to UNSTABLE, false = don't
+                    waitForQualityGate abortPipeline: true
+                }
+            }
+        }
         stage ("Terraform plan") {
             when { branch 'pre' } 
             steps {
