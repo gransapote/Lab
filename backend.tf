@@ -1,5 +1,5 @@
 terraform {
   backend "local" {
-    //Workspace_dir = "/opt/buckets/amelgar"
+    path = "/opt/buckets/amelgar/terraform.tfsatate"
   }
 }
