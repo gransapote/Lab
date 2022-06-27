@@ -49,7 +49,7 @@ pipeline {
         //stage ("Sonar: Escaneo de ramas en PR") {
         //    when { branch 'PR-*' }
         //    steps {
-        //// Realiza analisys en PR con SonarScanner y lo manda a SonarCloud
+        ////// Realiza analisys en PR con SonarScanner y lo manda a SonarCloud
         //        withSonarQubeEnv ('amelgarsonar') {
         //            sh "~/.sonar/sonar-scanner-4.7.0.2747-linux/bin/sonar-scanner \
         //                -Dsonar.organization=gransapote \
