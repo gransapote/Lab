@@ -46,23 +46,6 @@ pipeline {
                 }
             }
         }
-        //stage ("Sonar: Escaneo de ramas en PR") {
-        //    when { branch 'PR-*' }
-        //    steps {
-        ////// Realiza analisys en PR con SonarScanner y lo manda a SonarCloud
-        //        withSonarQubeEnv ('amelgarsonar') {
-        //            sh "~/.sonar/sonar-scanner-4.7.0.2747-linux/bin/sonar-scanner \
-        //                -Dsonar.organization=gransapote \
-        //                -Dsonar.projectKey=gransapote_Lab \
-		//	-Dsonar.sources=. \
-        //                -Dsonar.host.url=https://sonarcloud.io \
-        //                -Dsonar.pullrequest.provider='GitHub' \
-        //                -Dsonar.pullrequest.github.repository='gransapote/lab' \
-        //                -Dsonar.pullrequest.key='${env.CHANGE_ID}' \
-        //                -Dsonar.pullrequest.branch='${env.CHANGE_BRANCH}'"
-        //        }
-        //    }
-        //}
         stage ("Sonar: Escaneo de ramas en PR") {
             when { branch 'PR-*' }
             steps {
