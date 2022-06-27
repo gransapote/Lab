@@ -2,24 +2,11 @@
   
 //provider "aws" {
   //region  = "eu-west-1"
-  //shared_config_files      = ["/Users/tf_user/.aws/conf"]
-  //shared_credentials_files = ["/~/.aws/credentials"]
-  //access_key = "${var.aws_access_key_id}"
-  //secret_key = "${var.aws_secret_access_key}"
-  //profile = "default"
-  //access_key_id = "${var.aws_access_key_id}"
-  //secret_key = "${var.aws_secret_access_key}"
-  //access_key = var.access_key
-  //secret_key = var.secret_key
 //}
 
 
 resource "aws_s3_bucket" "mapfre-gitops-amelgar" {
   bucket = "mapfre-gitops-amelgar"
-//  acl = "public-read"
-//  website {
-//    index_document = "index.html"
-//  }
 }
 
 //resource "aws_s3_bucket_website_configuration" "mapfre-gitops-amelgar" {
