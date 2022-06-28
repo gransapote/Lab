@@ -74,7 +74,7 @@ pipeline {
             }
         }
         stage ("Terraform plan") {
-            when { branch 'pre' } 
+            when {  not { branch 'main' } } 
             steps {
                 sh "terraform plan"
             }
