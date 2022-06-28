@@ -16,5 +16,4 @@
   - name: Ejecuta el CHANGELOG
     script: ./cambios.sh > CHANGELOG.md
   - name: Ejecuta el versionado
-    ansible.builtin.shell:
-      cmd: ./version.sh > version.txt
+    script: ./version.sh > version.txt
