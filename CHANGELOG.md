@@ -6,6 +6,7 @@
 
 #### New
 
+* Version del html ([05a0bd3](https://github.com/gransapote/lab/commit/05a0bd3))
 * Subidos script de cambios y de version ([74957f4](https://github.com/gransapote/lab/commit/74957f4))
 * Version en Index añadido script ([2fcdafb](https://github.com/gransapote/lab/commit/2fcdafb))
 * Versionado de fichero ([49ebbcb](https://github.com/gransapote/lab/commit/49ebbcb))
@@ -16,6 +17,8 @@
 
 #### Update
 
+* Excepciones ([518d5ba](https://github.com/gransapote/lab/commit/518d5ba))
+* Modificacion Jenkinsfile y cambios ([c90f029](https://github.com/gransapote/lab/commit/c90f029))
 * Index con Jinja2 ([cb914c8](https://github.com/gransapote/lab/commit/cb914c8))
 * Actualizado fichero de excepciones ([fc66899](https://github.com/gransapote/lab/commit/fc66899))
 * Actualizacion del fichero CHANGELOG ([42aa0e3](https://github.com/gransapote/lab/commit/42aa0e3))
@@ -123,6 +126,24 @@
 * New:Nuevos ficheros ([b50e199](https://github.com/gransapote/lab/commit/b50e199))
 * test ([3ae19b4](https://github.com/gransapote/lab/commit/3ae19b4))
 * Initial commit ([f547a89](https://github.com/gransapote/lab/commit/f547a89))
+
+### Authors
+
+* gransapote
+
+## V0.0.1 (2022-06-27)
+
+### Changes
+
+#### Update
+
+* Excepciones ([518d5ba](https://github.com/gransapote/lab/commit/518d5ba))
+* Modificacion Jenkinsfile y cambios ([c90f029](https://github.com/gransapote/lab/commit/c90f029))
+
+#### Misc
+
+* Delete main.tf ([73d51cc](https://github.com/gransapote/lab/commit/73d51cc))
+* Delete variables.tf ([613842a](https://github.com/gransapote/lab/commit/613842a))
 
 ### Authors
 
