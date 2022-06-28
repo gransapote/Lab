@@ -16,6 +16,7 @@
   - name: Ejecuta un ls
     ansible.builtin.shell: 
       cmd: ls -la
+      chdir: ./
   - name: Ejecuta el CHANGELOG
     ansible.builtin.shell:
       cmd: ./cambios.sh > CHANGELOG.md
