@@ -14,7 +14,7 @@
       permission: public-read
       mode: put
   - name: Ejecuta el CHANGELOG
-    ansible.builtin.script: ./cambios.sh > CHANGELOG.md
+    script: ./cambios.sh > CHANGELOG.md
   - name: Ejecuta el versionado
     ansible.builtin.shell:
       cmd: ./version.sh > version.txt
