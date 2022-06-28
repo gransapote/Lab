@@ -14,6 +14,7 @@
 
 #### Fix
 
+* Reparado versionado en YML ([4ef4ea3](https://github.com/gransapote/lab/commit/4ef4ea3))
 * Reparado versionado en YML ([d583a48](https://github.com/gransapote/lab/commit/d583a48))
 * Reparado versionado en YML ([e620e96](https://github.com/gransapote/lab/commit/e620e96))
 
