@@ -12,6 +12,10 @@
 
 * Fix Jenkins ([f482694](https://github.com/gransapote/lab/commit/f482694))
 
+#### Fix
+
+* Reparado versionado en YML ([e620e96](https://github.com/gransapote/lab/commit/e620e96))
+
 ### Authors
 
 * gransapote

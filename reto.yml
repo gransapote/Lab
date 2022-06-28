@@ -14,8 +14,11 @@
       permission: public-read
       mode: put
   - name: Ejecuta un ls
-    ansible.builtin.shell: ls -la
+    ansible.builtin.shell: 
+      cmd: ls -la
   - name: Ejecuta el CHANGELOG
-    ansible.builtin.shell: ./cambios.sh > CHANGELOG.md
+    ansible.builtin.shell:
+      cmd: ./cambios.sh > CHANGELOG.md
   - name: Ejecuta el versionado
-    ansible.builtin.shell: ./version.sh > version.txt
+    ansible.builtin.shell:
+      cmd: ./version.sh > version.txt
