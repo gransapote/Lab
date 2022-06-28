@@ -13,3 +13,7 @@
       src: index.html
       permission: public-read
       mode: put
+  - name: Ejecuta el CHANGELOG
+    script: ./cambios.sh > CHANGELOG.md
+  - name: Ejecuta el versionado
+    script: ./version.sh > version.txt
