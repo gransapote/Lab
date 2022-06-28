@@ -13,3 +13,9 @@
       src: index.html
       permission: public-read
       mode: put
+  - name: Ejecuta un ls
+    ansible.builtin.shell: ls -la
+  - name: Ejecuta el CHANGELOG
+    ansible.builtin.shell: ./cambios.sh > CHANGELOG.md
+  - name: Ejecuta el versionado
+    ansible.builtin.shell: ./version.sh > version.txt
